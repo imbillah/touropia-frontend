@@ -1,7 +1,7 @@
 import image from "../../media/images/contact.jpg"
 function ContactUs() {
     return (
-        <div>
+        <div className='custom-margin'>
             <div className='container d-lg-flex my-3'>
             <div className='custom-width mt-5'>
             <h2 className='mt-4 fw-bold'>Contact Us</h2>
@@ -19,7 +19,7 @@ function ContactUs() {
             
         </div>
             <div className='custom-width'>
-            <img src={image} className='img-fluid ms-3  rounded-3' alt="contactus" />
+            <img src={image} className='img-fluid ms-3 rounded-3' alt="contactus" />
             </div>
     </div>
         </div>

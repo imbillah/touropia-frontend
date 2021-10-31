@@ -9,11 +9,17 @@ body {
 .custom-width {
   width: 50%;
 }
+.custom-margin {
+  margin-bottom: 100px;
+}
 .text-custom {
   color: #00095e;
 }
 .bg-custom {
   background: #fbb667;
+}
+.custom-bg {
+  background: rgba(211, 211, 211, 0.4);
 }
 @media only screen and (max-width: 768px) {
   .custom-width {

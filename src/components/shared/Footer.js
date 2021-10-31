@@ -1,7 +1,7 @@
 
 function Footer() {
     return (
-        <footer className='mt-auto bg-custom'>
+        <footer className='bg-custom'>
       <div className='container py-3 mt-5' >
       <div className='row  row-cols-lg-3'>
         <div>

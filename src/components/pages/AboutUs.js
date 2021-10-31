@@ -1,7 +1,7 @@
 import image from '../../media/images/about-us.png'
 function AboutUs() {
     return (
-        <div>
+        <div className='custom-margin'>
             <article className ='container d-lg-flex'>
                 <div className='custom-width'>
                 <img src={image} className='img-fluid rounded-circle mt-4' alt="aboutus" />

@@ -20,6 +20,7 @@ function Services() {
                 <div className="card-body">
                 <h3 className="card-title my-3 text-custom">{service.name}</h3>
                 <p className="card-text mb-3">{service.description}</p>
+                <p className='fw-bold'>Booking start from : ${service.price}</p>
                 <Link to={`/booking/${service._id}`} className='text-decoration-none fw-bold'>
                   <button className ='btn btn-warning fw-bold text-custom'>Book Now</button>
                 </Link>

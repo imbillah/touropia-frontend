@@ -12,6 +12,7 @@ initilizeFirebase();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
+  const [isLoading , setIsLoading] =useState(true)
   const auth = getAuth();
 
   //google signin
@@ -27,6 +28,7 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
+      setIsLoading(false)
     });
   }, []);
 
@@ -39,6 +41,7 @@ const useFirebase = () => {
   return {
     user,
     setUser,
+    isLoading,
     auth,
     googleSignInHandler,
     logOut,
