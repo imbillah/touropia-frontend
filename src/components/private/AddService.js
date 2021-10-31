@@ -5,7 +5,7 @@ function AddService() {
     const { register, handleSubmit, reset} = useForm();
     const onSubmit = data => {
         // posting to DB with axois
-        axios.post("http://localhost:7000/services", data)
+        axios.post("https://protected-wave-34924.herokuapp.com/services", data)
         .then((res) => {
             if (res.data.insertedId) {
             swal("Processed!", "Service added successfully", "success");
