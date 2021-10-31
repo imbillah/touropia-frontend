@@ -11,6 +11,14 @@ function Services() {
     return (
         <div className='container text-center custom-margin' style={{marginTop:'100px'}}>
         <h1 className='my-5 fw-bold text-custom'>Travel services we are offering</h1>
+        {
+          services.length === 0 ?
+            <div className ='container text-center'>
+                <div class="spinner-border text-warning" role="status">
+                <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        :
         <div className='row row-cols-lg-3 g-3'>
           {
             services.map(service => (
@@ -30,6 +38,7 @@ function Services() {
             ))
           }
         </div>
+        }
       </div>
     )
 }

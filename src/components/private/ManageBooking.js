@@ -26,6 +26,14 @@ function ManageBooking() {
     return (
         <div className=' text-center container mt-5' style={{marginBottom:'200px'}}>
             <h2 className='text-custom mb-4 fw-bold'>Manage all users booking</h2>
+            {
+                bookings.length === 0 ?
+                <div className ='container text-center'>
+                    <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            :
             <table className='table table-dark table-striped'>
                 <thead>
                     <tr>
@@ -52,6 +60,7 @@ function ManageBooking() {
                 ))
             }
             </table>
+            }
         </div>
     )
 }

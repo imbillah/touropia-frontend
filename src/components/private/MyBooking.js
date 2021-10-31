@@ -29,6 +29,14 @@ function MyBooking() {
     return (
         <div className='container' style={{marginTop:"100px", marginBottom:'200px'}}>
             <h2 className='text-center text-custom'>All Your selected booking</h2>
+            {
+                myBookings.length === 0 ?
+                <div className ='container text-center'>
+                    <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            :
             <div className='row row-cols-lg-2 g-3 mt-4'>
             {
                 myBookings.map(mybook =>(
@@ -48,6 +56,7 @@ function MyBooking() {
                 ))
             }
             </div>
+            }
         </div>
     )
 }
