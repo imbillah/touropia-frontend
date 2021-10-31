@@ -1,16 +1,18 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
+import swal from "sweetalert";
 import useAuth from "../../hooks/useAuth";
 function Booking() {
     const[service, setService] = useState([])
     const {user} = useAuth();
     const { id } = useParams();
+    const history = useHistory()
     const { register, handleSubmit, reset} = useForm();
 
     useEffect(()=>{
-        axios(`http://localhost:7000/services/${id}`)
+        axios(`https://protected-wave-34924.herokuapp.com/services/${id}`)
         .then(res => setService(res.data))
     },[])
 
@@ -19,17 +21,18 @@ function Booking() {
         data.status = 'Pending'
         data.image = `${service.image}`
         // posting to DB with axois
-            axios.post("http://localhost:7000/booking", data)
+            axios.post("https://protected-wave-34924.herokuapp.com/booking", data)
             .then((res) => {
                 if (res.data.insertedId) {
-                alert('Service Added')
+                swal("Well Done!", "Booking submitter for approval", "success");
+                history.push('/mybooking')
                 }
         }).catch((err) => console.log(err));
         reset()
     }
     return (
-        <div className='container text-center mt-5'>
-            <div className='shadow custom-width mx-auto p-3'>
+        <div className='container text-center mt-5 custom-margin'>
+            <div className='shadow custom-width mx-auto p-3 bg-custom'>
             <h1 className='text-custom fw-bold'>Finalize Booking</h1>
             <p className='text-custom fs-5 fst-italic'>Fill out the necessary fields to confirm booking</p>
             <form onSubmit={handleSubmit(onSubmit)} >
@@ -58,7 +61,7 @@ function Booking() {
                     className="p-2 m-2 w-75"/>}
                     <br />
                     <input type="submit" value='Confirm Booking' 
-                    className='btn btn-warning mt-3 py-2 fw-bold rounded-pill'/>
+                    className='btn btn-warning my-3 py-2 fw-bold rounded-pill'/>
             </form>
             </div> 
         </div>

@@ -12,6 +12,8 @@ import Booking from "./components/private/Booking";
 import MyBooking from "./components/private/MyBooking";
 import ManageBooking from "./components/private/ManageBooking";
 import Reviews from "./components/shared/Reviews";
+import Events from "./components/shared/Events";
+import NotFound from "./components/shared/NotFound";
 function App() {
   return (
     <AuthProvider>
@@ -23,6 +25,7 @@ function App() {
           <Route path ='/about' component={AboutUs}/>
           <Route path ='/contact' component={ContactUs}/>
           <Route path ='/reviews' component={Reviews}/>
+          <Route path ='/events' component={Events}/>
           <PrivateRoute path='/booking/:id'>
             <Booking/>
           </PrivateRoute>
@@ -33,6 +36,7 @@ function App() {
             <ManageBooking/>
           </PrivateRoute>
           <Route path ='/addservice' component={AddService}/>
+          <Route path='*' component={NotFound}/>
         </Switch>
         <Footer/>
       </Router>

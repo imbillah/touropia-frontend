@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import swal from "sweetalert";
 import useAuth from "../../hooks/useAuth";
 
 
@@ -8,17 +9,17 @@ function MyBooking() {
     const {user} = useAuth()
 
     useEffect(()=>{
-        axios(`http://localhost:7000/mybooking/${user.email}`)
+        axios(`https://protected-wave-34924.herokuapp.com/mybooking/${user.email}`)
         .then( res => setMyBookings(res.data))
     },[user])
     
     const deletHandler = id=>{
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if(proceed){
-            const url = `http://localhost:7000/booking/${id}`;
+            const url = `https://protected-wave-34924.herokuapp.com/booking/${id}`;
             axios.delete(url).then((res) => {
                 if (res.data.deletedCount > 0) {
-                alert('Delete Success')
+                swal("Processed !", "Booking canceled successfully", "success");
                 const restOrders = myBookings.filter((booking) => booking._id !== id);
                 setMyBookings(restOrders);
                 }
@@ -26,13 +27,13 @@ function MyBooking() {
         }
     }
     return (
-        <div className='container custom-margin'>
-            <h2 className='text-center text-custom'>Here is you all booking</h2>
+        <div className='container' style={{marginTop:"100px", marginBottom:'200px'}}>
+            <h2 className='text-center text-custom'>All Your selected booking</h2>
             <div className='row row-cols-lg-2 g-3 mt-4'>
             {
                 myBookings.map(mybook =>(
                     <div>
-                        <div className='d-flex p-2 shadow rounded-3 mx-lg-4'>
+                        <div className='d-flex p-2 shadow rounded-3 mx-lg-4 bg-custom mt-4'>
                             <img src={mybook.image} className='w-25 me-3 rounded-3' alt="" />
                             <div>
                                 <h4>{mybook.sevicename}</h4>

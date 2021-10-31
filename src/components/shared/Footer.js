@@ -1,17 +1,17 @@
 
 function Footer() {
     return (
-        <footer className='bg-custom'>
-      <div className='container py-3 mt-5' >
+        <footer className='bg-custom py-4' style={{marginTop:'150px'}}>
+      <div className='container' >
       <div className='row  row-cols-lg-3'>
         <div>
-           <h4 className='mb-3'>Touropia</h4>
+           <h3 className='mb-3 text-custom'>Touropia</h3>
+           <p>Travel More | Discover Yourself</p>
+           <i className="bi bi-geo-alt-fill text-dark"> 1913 Armbrester Drive, CA</i>
            <br />
-           <i className="bi bi-geo-alt-fill text-dark"> 17004 W Marshall Ln</i>
-           <br />
-            <i className="bi bi-telephone-fill text-dark"> +1-614-368-7964</i>
+            <i className="bi bi-telephone-fill text-dark"> 714-471-3326</i>
             <br />
-            <i className="bi bi-envelope-fill text-dark"> contact@touropia.org</i>
+            <i className="bi bi-envelope-fill text-dark"> contact@touropia.net</i>
             
         </div>
         <div>
@@ -20,14 +20,14 @@ function Footer() {
           <i className="bi bi-twitter me-3 fs-4"></i>
           <i className="bi bi-linkedin me-3 fs-4"></i>
           <i className="bi bi-youtube fs-4"></i>
-          <p className='my-4'> Copyright &copy; touropia 2022</p>
+          <p className='my-5'> Copyright ©2022 All rights reserved</p>
           </div>
         </div>
         <div>
-          <h4>News Latter</h4>
-          <p>Wanna get update about our travel related services? Sign up for our news latter</p>
+          <h3 className='text-custom'>News Latter</h3>
+          <p>Wanna get update about our promotion & dicount? Sign up for our news latter</p>
           <input type="text" className="form-control" placeholder="Enter your email"/>
-          <button className='btn btn-secondary mt-3'>Submit</button>
+          <button className='btn btn-warning mt-3'>Submit</button>
         </div>
       </div>
       </div>

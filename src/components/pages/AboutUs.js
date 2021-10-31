@@ -7,11 +7,10 @@ function AboutUs() {
                 <img src={image} className='img-fluid rounded-circle mt-4' alt="aboutus" />
                 </div>
                 <div className='mt-5 custom-width'>
-                <h2 className='fw-bold mt-5'>About us</h2>
-                <p className='text-muted lh-lg mt-3'>MediCare was established in 1983 by Dr. Prathap C Reddy, renowned as the architect of modern healthcare in India. As the nation’s first corporate hospital, MediCare is acclaimed for pioneering the private healthcare revolution in the country.</p>
+                <h2 className='fw-bold mt-5 text-custom'>About us</h2>
+                <p className='text-muted lh-lg mt-3'>Touropia hotel search allows users to compare hotel prices in just a few clicks from more than 300 booking sites for more than 5.0 million hotels and other types of accommodation in over 190 countries.</p>
                 <p className='text-muted lh-lg'>      
-                We believe Learning is the source of human progress. It has the power to transform our world from illness to health, from poverty to prosperity, from conflict to peace. It has the power to transform our livesfor ourselves, for our families, for our communities.
-                No matter who we are or where we are, learning empowers us to change and grow and redefine what’s possible. That’s why access to the best learning is a right, not a privilege.
+                We help millions of travelers each year compare deals for hotels and accommodations. Get information for weekend trips to destinations like Penang or Cameron Highlands and you can find the right hotel on trivago. Langkawi and its surrounding area are great for trips that are a week or longer with the numerous hotels available.
                 </p>
                 </div>
             </article>

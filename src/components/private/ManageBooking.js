@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import swal from "sweetalert"
 
 
 function ManageBooking() {
@@ -12,10 +13,10 @@ function ManageBooking() {
     const deleteHandler = id =>{
         const proceed = window.confirm("Are you sure, you want to delete?");
         if(proceed){
-            const url = `http://localhost:7000/booking/${id}`;
+            const url = `https://protected-wave-34924.herokuapp.com/booking/${id}`;
             axios.delete(url).then((res) => {
                 if (res.data.deletedCount > 0) {
-                alert('Delete Success')
+                swal("Processed !", "Booking deleted successfully", "success");
                 const restServices = bookings.filter((booking) => booking._id !== id);
                 setBookings(restServices);
                 }
@@ -23,8 +24,8 @@ function ManageBooking() {
         }
     }
     return (
-        <div className=' text-center container'>
-            <h2>Manage user booking</h2>
+        <div className=' text-center container mt-5' style={{marginBottom:'200px'}}>
+            <h2 className='text-custom mb-4 fw-bold'>Manage all users booking</h2>
             <table className='table table-dark table-striped'>
                 <thead>
                     <tr>

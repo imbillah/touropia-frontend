@@ -1,11 +1,20 @@
+import { useHistory } from "react-router";
+import swal from "sweetalert";
 import image from "../../media/images/contact.jpg"
 function ContactUs() {
+
+    const history = useHistory();
+    const submitHandler=e=>{
+        e.preventDefault()
+        swal("Thank You", "We will contact with you soon", "success")
+        history.push('/')
+    }
     return (
         <div className='custom-margin'>
             <div className='container d-lg-flex my-3'>
             <div className='custom-width mt-5'>
-            <h2 className='mt-4 fw-bold'>Contact Us</h2>
-            <p className='fst-italic mt-4 text-success'>Fill out the form and we will get back to you soon</p>
+            <h1 className='mt-4 fw-bold text-custom'>Contact Us</h1>
+            <p className='fst-italic mt-4 text-custom'>Fill out the form and we will get back to you soon</p>
             <form>
             <input type="text" className="form-control " placeholder="First Name" required/>
             <input type="text" className="form-control my-3" placeholder="Last Name"/>
@@ -14,7 +23,7 @@ function ContactUs() {
                 <span className="input-group-text text-muted">Your Message</span>
                 <textarea className="form-control" aria-label="With textarea" required></textarea>
                 </div>
-            <button className='btn btn-success'>Submit</button>
+            <button className='btn btn-warning' onClick={submitHandler}>Submit</button>
             </form>
             
         </div>
