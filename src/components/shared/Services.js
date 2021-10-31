@@ -9,7 +9,7 @@ function Services() {
         .then(res => setServices(res.data))
     },[])
     return (
-        <div className='container text-center'>
+        <div className='container text-center custom-margin'>
         <h1 className='my-5 fw-bold text-custom'>Travel services we are offering</h1>
         <div className='row row-cols-lg-3 g-3'>
           {

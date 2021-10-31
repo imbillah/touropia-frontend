@@ -11,6 +11,7 @@ import PrivateRoute from "./components/private/PrivateRoute";
 import Booking from "./components/private/Booking";
 import MyBooking from "./components/private/MyBooking";
 import ManageBooking from "./components/private/ManageBooking";
+import Reviews from "./components/shared/Reviews";
 function App() {
   return (
     <AuthProvider>
@@ -21,15 +22,16 @@ function App() {
           <Route path="/login" component={LogIn} />
           <Route path ='/about' component={AboutUs}/>
           <Route path ='/contact' component={ContactUs}/>
+          <Route path ='/reviews' component={Reviews}/>
           <PrivateRoute path='/booking/:id'>
             <Booking/>
           </PrivateRoute>
-          <Route path='/mybooking'>
+          <PrivateRoute path='/mybooking'>
             <MyBooking/>
-          </Route>
-          <Route path='/managebooking'>
+          </PrivateRoute>
+          <PrivateRoute path='/managebooking'>
             <ManageBooking/>
-          </Route>
+          </PrivateRoute>
           <Route path ='/addservice' component={AddService}/>
         </Switch>
         <Footer/>

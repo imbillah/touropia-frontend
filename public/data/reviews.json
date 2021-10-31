@@ -1,0 +1,65 @@
+[{
+		"id": "555e",
+		"name": "Regina Urbano",
+		"country": "Canada",
+		"ratings": "4.7",
+		"img": "https://i.ibb.co/QKGtz3V/5.jpg",
+		"remarks": "Excellent site. Gives options of booking with or without cancellation options. A must in this covid19 environment. The site clearly lists all room options at the business or resort hotel with photos making an informed selection easy."
+	},
+	{
+		"id": "666f",
+		"name": "Marta Bradley",
+		"country": "USA",
+		"ratings": "4.9",
+		"img": "https://i.ibb.co/VT4Ngf5/6.jpg",
+		"remarks": "Most sites are fairly easy to use. To really get to want you want, you have to wade through the sites. With touropia, it is all in one site, offers not bad prices but it takes awhile to get through everything."
+	},
+	{
+		"id": "222b",
+		"name": "Zachary Shelton",
+		"country": "UK",
+		"ratings": "4.5",
+		"img": "https://i.ibb.co/2k113GJ/2.jpg",
+		"remarks": "My card was stolen and a booking was made under the card, the customer service responded within 12 hours and agreed to cancel the trip without charges to my card, took care of any inconvenience and sorted it out."
+	},
+	{
+		"id": "333c",
+		"name": "Franklin Morgan",
+		"country": "Russia",
+		"ratings": "5",
+		"img": "https://i.ibb.co/hDvvDfJ/3.jpg",
+		"remarks": "I used the service on Touropia. The page provides very accurate rooms and very reasonable prices. In particular, useful information and travel very clear, help me arrange a coherent trip. Thanks for booking for giving my family a wonderful vacation."
+	},
+	{
+		"id": "111a",
+		"name": "Lucas Murphy",
+		"country": "USA",
+		"ratings": "4.8",
+		"img": "https://i.ibb.co/HBw0L7q/1.jpg",
+		"remarks": "Touropia went above and beyond to give me a refund when they didn't have to. They were polite and professional and have excellent customer service!"
+	},
+	{
+		"id": "444d",
+		"name": "Mahbub Sizer",
+		"country": "Bangladesh",
+		"ratings": "4.4",
+		"img": "https://i.ibb.co/pjjkvMz/4.jpg",
+		"remarks": "I used Touropia to reserve 12 nights and a rental car on my recent trip. All of the accommodations were excellent. There was a minor glitch and Touropia immediately resolved the issue.Personnel were extremely courteous and helpful!"
+	},
+	{
+		"id": "777g",
+		"name": "Gabriel Howell",
+		"country": "Germany",
+		"ratings": "4.5",
+		"img": "https://iili.io/Rt92iF.jpg",
+		"remarks": "Zen Zeng hotel is a great place to stay. Services is awesome. The staff are extremely friendy. Rashid really provides great services. It's near the city centre and it's convenient. Awesome location to be at."
+	},
+	{
+		"id": "888h",
+		"name": "Elias Walker",
+		"country": "Australia",
+		"ratings": "4.2",
+		"img": "https://iili.io/Rt9Kla.jpg",
+		"remarks": "Touropia made it easy to reserve hotel stays, plenty of pics to help make decisions. Cancellation were easy to do as long as they are processed by expiration date."
+	}
+]
