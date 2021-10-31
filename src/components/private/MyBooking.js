@@ -31,10 +31,8 @@ function MyBooking() {
             <h2 className='text-center text-custom'>All Your selected booking</h2>
             {
                 myBookings.length === 0 ?
-                <div className ='container text-center'>
-                    <div class="spinner-border text-warning" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                    </div>
+                <div className ='text-center mt-5'>
+                    <h5 className='text-danger'>You didn't book any services yet</h5>
                 </div>
             :
             <div className='row row-cols-lg-2 g-3 mt-4'>

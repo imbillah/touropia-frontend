@@ -35,7 +35,9 @@ function App() {
           <PrivateRoute path='/managebooking'>
             <ManageBooking/>
           </PrivateRoute>
-          <Route path ='/addservice' component={AddService}/>
+          <PrivateRoute path='/addservice'>
+            <AddService/>
+          </PrivateRoute>
           <Route path='*' component={NotFound}/>
         </Switch>
         <Footer/>
